@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlayerCoverView: View {
+struct P: View {
 
     @Binding var expand: Bool
 
