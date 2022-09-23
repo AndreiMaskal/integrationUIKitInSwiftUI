@@ -29,7 +29,7 @@ struct PlayerProgressLine: View {
             .font(.caption)
             .foregroundColor(.secondary)
             .padding([.trailing, .leading])
-            .offset(y: -11)
+            .offset(y: -20)
     }
 }
 }

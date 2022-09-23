@@ -18,7 +18,7 @@ struct PlayerView: View {
             Rectangle()
                 .foregroundColor(Color(UIColor.secondarySystemBackground))
                 .frame(maxHeight: expand ? .infinity : 90)
-                .opacity(0.95)
+//                .opacity(0.95)
             
             VStack {
                 
@@ -85,10 +85,8 @@ struct PlayerView: View {
                         .padding()
                         
                         PlayerProgressLine()
-                        
                         PlayerExtendedControlModul()
-                        
-                        
+                    
                         HStack(spacing: 15) {
                             Image(systemName: "speaker.fill")
                             Slider(value: $volume, in: 0...10, onEditingChanged: {_ in
@@ -101,8 +99,6 @@ struct PlayerView: View {
                         
                         PlayerExtendedBottomButtons()
                             .padding()
-                        
-                        
                     }
 
                     .frame(width: expand ? nil : 0, height: expand ? nil : 0)
@@ -113,7 +109,7 @@ struct PlayerView: View {
                 }
             }
         }
-      
+//        .offset(y: expand  ? 0 : 12)        
         .onTapGesture(count: 2) {
             withAnimation(.spring()){
                 expand.toggle()

@@ -35,12 +35,22 @@ struct TableView: View {
                     Text("Поиск")
                     Image(systemName: "magnifyingglass")
                 }
+                
+                NavigationView {
+                    SearchViewByViewController()
+                    
+                }
+                .tabItem {
+                    Text("Search UIKit")
+                    Image(systemName:"arrow.up.left.and.down.right.magnifyingglass")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
             }
             .accentColor(.red)
-            
             .safeAreaInset(edge: .bottom) {
                 PlayerView(animation: animation, expand: $expand)
-                    .offset(y: expand  ? 0 : -50)
+                    .offset(y: expand  ? 0 : -38)
             }
         }
     }
